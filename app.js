@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelectorAll(".button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -28,8 +28,10 @@ var createNewTaskElement=function(taskString){
     //button.edit
   var editButton=document.createElement("button");//edit button
 
+
     //button.delete
   var deleteButton=document.createElement("button");//delete button
+
   var deleteButtonImg=document.createElement("img");//delete button image
 
   label.innerText=taskString;
@@ -46,6 +48,7 @@ var createNewTaskElement=function(taskString){
   deleteButton.className="delete";
   deleteButtonImg.src='./remove.svg';
   deleteButton.appendChild(deleteButtonImg);
+  deleteButtonImg.classList.add('remove-img');
 
 
     //and appending.
@@ -54,6 +57,10 @@ var createNewTaskElement=function(taskString){
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
+  checkBox.classList.add('checkbox');
+  deleteButton.classList.add('button');
+  editButton.classList.add('button');
+  listItem.classList.add('li');
   return listItem;
 }
 
@@ -82,11 +89,12 @@ var editTask=function(){
 
   var listItem=this.parentNode;
 
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector('.input-text');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit");
   var containsClass=listItem.classList.contains("edit-mode");
   //If class of the parent is .editmode
+
   if(containsClass){
 
     //switch to .editmode
@@ -94,6 +102,7 @@ var editTask=function(){
     label.innerText=editInput.value;
     editBtn.innerText="Edit";
     }else{
+
       editInput.value=label.innerText;
       editBtn.innerText="Save";
     }
