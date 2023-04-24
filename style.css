@@ -18,8 +18,8 @@
 }
 
 @media (max-width:768px) {
-.header { text-align: center;
-}
+  .header { text-align: center;
+  }
 }
 .centered-main-page-element {
   display: block;
@@ -41,11 +41,9 @@
 li, h3 {
   list-style:none;
 }
-
 input,button{
   outline:none;
 }
-
 .button {
   background: none;
   border: 0px;
@@ -99,7 +97,6 @@ input,button{
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,10 +137,8 @@ input,button{
   display:none
 }
 .edit-mode .task-lable{
-    display: none;
+  display: none;
 }
-
-
  .edit-mode .edit-input {
   display:inline-block;
   width:224px;
