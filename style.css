@@ -30,7 +30,7 @@
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .task-wrapper {
   display: flex;
@@ -116,7 +116,7 @@ input,button {
   width: 226px;
 }
 .li >    .input-text {
-  width: 226px
+  width: 226px;
 }
 .remove-img {
   height: 2em;
@@ -135,7 +135,7 @@ input,button {
 
 /* Edit Task */
 .li .input-text {
-  display: none
+  display: none;
 }
 .edit-mode .task-lable {
   display: none;
